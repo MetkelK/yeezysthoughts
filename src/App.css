@@ -1,0 +1,95 @@
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 3px;
+  background-image: url('kanye-west-0814-GQ-FEKW01.01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40% 10%;
+  box-shadow: 3px 3px 30px 1px rgba(0,0,0,0.75);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.quote {
+  background-color: #fff;
+  padding: 1rem;
+  margin-top: 4rem;
+  box-shadow: 3px 3px 30px 1px rgba(0,0,0,0.75);
+  border-radius: 3px;
+  width: 80%;
+}
+
+blockquote p {
+  animation-name: quote;
+  animation-duration: 2s;
+}
+
+@keyframes quote {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.button {
+  background-color: #1a212b;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin: 0.25rem;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  box-shadow: 3px 3px 30px 1px rgba(0,0,0,0.75);
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .quote {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 2rem;
+  }
+  
+  .quote {
+    width: 40%;
+  }
+}
