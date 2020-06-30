@@ -1,20 +1,27 @@
 import React from 'react';
 import './App.css';
-import QuoteBlock from './components/Quote';
+import QuotePage from './components/QuotePage';
+import Home from './components/Home';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
+
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      isLoading: false,
-      quote: " "
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            error: null,
+            isLoaded: false,
+            isLoading: false,
+            quote: " "
+        };
   }
 
 componentDidMount() {
-  this.getQuote();
+    this.getQuote();
 }
 
 handleClick = () => {
@@ -23,9 +30,9 @@ handleClick = () => {
 }
 
 getQuote() {
-  fetch("https://api.kanye.rest/")
-      .then(res => res.json())
-      .then(
+    fetch("https://api.kanye.rest/")
+        .then(res => res.json())
+        .then(
         (result) => {
           this.setState({
             isLoaded: true,
@@ -40,44 +47,31 @@ getQuote() {
             error
           });
         }
-      )
+    )
 }
 
 render() {
-  const { quote, isLoaded, isLoading } = this.state;
-
-  let quoteDisplay;
-
-  if (!isLoaded) {
-    quoteDisplay = <QuoteBlock quote={"Sorry, I can't think right now"}/>
-  } else {
-    quoteDisplay = <QuoteBlock quote={quote}/>
-  }
-
-  let loadingQuote;
-
-  if (!isLoading) {
-    loadingQuote = "Read My Thoughts";
-  } else {
-    loadingQuote = "Hold on I'm thinking";
-  }
-
-  return (
-    <div className="App">
-      <div className="container">
-        <div className="quote">
-          {quoteDisplay}
-          <button 
-          className="button" 
-          onClick={this.handleClick}
-          disabled={isLoading ? true : false}
-          >
-          {loadingQuote}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route path="/quotes">
+                    <div className="App">
+                        <div className="quote_container container">
+                            <QuotePage quote={this.state} handleClick={this.handleClick}/>
+                        </div>
+                    </div>
+                </Route>
+                <Route path="/">
+                    <div className="App">
+                        <div className="container">
+                            <Home />
+                        </div>
+                    </div>
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 }
+
 export default App;
