@@ -1,3 +1,7 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .App {
   margin: 0;
   padding: 0;
@@ -10,18 +14,20 @@
   align-items: center;
 }
 
+.quote_container {
+  background-image: url('kanye-west-0814-GQ-FEKW01.01.jpg') !important;
+}
+
 .container {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0;
   text-align: center;
-  border-radius: 3px;
-  background-image: url('kanye-west-0814-GQ-FEKW01.01.jpg');
+  background-image: url('yeezus-1593466362055-2261.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 40% 10%;
-  box-shadow: 3px 3px 30px 1px rgba(0,0,0,0.75);
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -30,8 +36,8 @@
 
 .quote {
   background-color: #fff;
-  padding: 1rem;
-  margin-top: 4rem;
+  padding: 2rem;
+  margin: 4rem;
   box-shadow: 3px 3px 30px 1px rgba(0,0,0,0.75);
   border-radius: 3px;
   width: 80%;
@@ -71,24 +77,12 @@ blockquote p {
 }
 
 @media (min-width: 576px) {
-  .container {
-    padding: 1rem;
-  }
-
   .quote {
     width: 50%;
   }
 }
 
-@media (min-width: 768px) {}
-
-@media (min-width: 992px) {}
-
-@media (min-width: 1200px) {
-  .container {
-    padding: 2rem;
-  }
-  
+@media (min-width: 1200px) { 
   .quote {
     width: 40%;
   }

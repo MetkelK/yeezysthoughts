@@ -1,10 +1,11 @@
 import React from 'react';
-import Quote from './components/Quote';
 
-const QuoteBlock = () => {
+const QuoteBlock = (props) => {
 	return(
-		<Quote quote={quote}/>
+		<blockquote><p>{props.quote}</p> 
+			<footer><cite>- Yeezy</cite></footer>
+		</blockquote>
 	)
 }
 
-export default Quote;
+export default QuoteBlock;
