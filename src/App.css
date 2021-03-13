@@ -81,7 +81,7 @@ blockquote p {
 
 .button {
   background-color: #1a212b;
-  border: none;
+  border: 1px solid #2e3b4d;
   border-radius: 3px;
   color: white;
   padding: 1rem;
