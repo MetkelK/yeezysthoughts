@@ -49,7 +49,8 @@ body {
 }
 
 .quote a:link,
-.quote a:visited {
+.quote a:visited,
+.quote a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -82,23 +83,26 @@ blockquote p {
 .button {
   background-color: #1a212b;
   border: none;
-  -webkit-appearance: none;
-  -webkit-box-shadow: 1px 1px 15px 1px rgba(92, 92, 92, 1);
-  box-shadow: 1px 1px 15px 1px rgba(92, 92, 92, 1);
+  /* -webkit-appearance: none; */
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   color: white;
   padding: 1rem;
   text-align: center;
   margin: 0.25rem;
   cursor: pointer;
-  -webkit-transition-duration: 0.7s;
-  transition-duration: 0.7s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .button:hover {
-  -webkit-appearance: none;
-  -webkit-box-shadow: 3px 3px 20px 1px rgba(92, 92, 92, 0.75);
-  box-shadow: 3px 3px 20px 1px rgba(92, 92, 92, 0.75);
+  /* -webkit-appearance: none; */
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
   border: none;
 }
 
