@@ -81,7 +81,7 @@ blockquote p {
 }
 
 .button {
-  background-color: #1a212b;
+  background-color: #3c5578;
   border: none;
   /* -webkit-appearance: none; */
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -98,6 +98,7 @@ blockquote p {
 }
 
 .button:hover {
+  background-color: #546378;
   /* -webkit-appearance: none; */
   -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
