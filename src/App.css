@@ -13,10 +13,12 @@ body {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+  background-color: #232a42;
 }
 
 .quote_container {
   background-image: url("kanye-west-0814-GQ-FEKW01.01.jpg") !important;
+  mix-blend-mode: normal !important;
 }
 
 .container {
@@ -26,6 +28,7 @@ body {
   padding: 0;
   text-align: center;
   background-image: url("yeezus-1593466362055-2261.jpg");
+  mix-blend-mode: hard-light;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 40% 10%;
@@ -36,16 +39,28 @@ body {
 }
 
 .quote {
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 2rem;
   margin: 4rem;
-  box-shadow: 3px 3px 30px 1px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 3px 3px 30px 1px rgba(0, 0, 0, 0.75); */
   border-radius: 3px;
   width: 80%;
+  color: #fff;
+}
+
+.quote a:link,
+.quote a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.quote a:hover {
+  text-decoration: underline;
 }
 
 blockquote {
   margin: 0.5rem;
+  color: #fff;
 }
 
 blockquote p {
